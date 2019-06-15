@@ -18,3 +18,6 @@ Family5: MANEC (PF07502)
 ## Input
 python3 ece208_2hmm.py -f 'dataset/1.txt,dataset/2.txt,dataset/3.txt,dataset/4.txt,dataset/5.txt' -m 1 -o 1-order.txt\
 python3 ece208_2hmm.py -f 'dataset/1.txt,dataset/2.txt,dataset/3.txt,dataset/4.txt,dataset/5.txt' -m 2 -o 2-order.txt
+
+## Result
+![loading error](https://github.com/l6chen/ECE208_HMM2/blob/master/Results/hmm1%20vs%20hmm2.jpg)
