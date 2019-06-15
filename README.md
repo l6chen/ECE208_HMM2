@@ -1,7 +1,7 @@
 # ECE208_HMM2
 
 Guangjun Xue A53283032\
-Jiangrui Chen A53270085\
+Jiangrui Chen A53281208\
 Linfeng Chen A53270085\
 Tianming Sun A53267707
 
