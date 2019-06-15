@@ -2,7 +2,7 @@
 
 Guangjun Xue A53283032\
 Jiangrui Chen A53281208\
-Linfeng Chen A53270085\
+Lingfeng Chen A53270085\
 Tianming Sun A53267707
 
 ## Dataset
