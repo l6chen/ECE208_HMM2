@@ -6,7 +6,7 @@ Linfeng Chen A53270085\
 Tianming Sun A53267707
 
 ## Dataset
-Five families from a clan from PFam Library.\
+Five families from a clan in PFam Library are given:\
 https://pfam.xfam.org/clan/PAN 
 
 Family1: PAN_1 (PF00024)\
