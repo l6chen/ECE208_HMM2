@@ -178,7 +178,7 @@ def forward(seq,A,B,mode=1):
         cur_staPool = [(1,0),(1,1)]#['M1','D1'] t=1
         f = np.array([0.8,0.2])
         for i in range(seqLen-1):
-            f = f/f.sum()
+            f = f/f.sum() if f.sum() != 0 else f * 0
             cur_staPool_ = []
             for ind,item in enumerate(f):
                 if item>0:
@@ -213,7 +213,7 @@ def forward(seq,A,B,mode=1):
         cur_staPool = [(1,0,2,0),(1,1,2,0),(1,0,2,1),(1,1,2,1),(1,0,1,2),(1,1,1,2)]#['M1M2','D1M2','M1D2','D1D2','M1I1','D1I1'] 
         f = np.array([0.3,0.2,0.2,0.1,0.1,0.1])
         for i in range(1,seqLen-1):
-            f = f/f.sum()
+            f = f/f.sum() if f.sum() != 0 else f * 0
             cur_staPool_ = []
             for ind,item in enumerate(f):
                 if item>0:
@@ -270,24 +270,6 @@ if __name__ == "__main__":
     parser.add_argument('-o', '--output', required=False, type=str, default='stdout', help="Output Score")
     parser.add_argument('-m', '--mode', required=True, type=int, default=1, help="Mode")
     args = parser.parse_args()
-
-#    # load gene family
-#    try:
-#        family_train = Family(args.family,mode='train')
-#        family_test = Family(args.family,mode='test')
-#    except:
-#        raise ValueError("Wrong direction or file!")
-#
-#    # train the 2hmm
-#    probs,A1,A2,B1,B2 = train2hmm(family_train)
-#
-#    # evaluate the 2hmm
-#
-#
-#    #output score
-#    outfile = open(args.output,'w')
-#    outfile.write(f'{len(probs)} {len(A1)} {len(A2)} {len(B1)} {len(B2)}')
-#    outfile.close()
 
     #suppose there are five families and you need to predict the label of testset
     family = re.split(",",args.family)
