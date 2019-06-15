@@ -249,7 +249,7 @@ def evaluate(A,B,testcase,j,mode=1):
     testres = []
     for i in range(len(A[0])):
         ps = []
-        for ind,seq in enumerate(testcase.seq[0:7]):
+        for ind,seq in enumerate(testcase.seq):
             print(ind)
             ps.append(forward(seq,A[mode-1][i],B[mode-1][i],mode=mode))
     
